@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background-color: #212121;
+}
+header h1{
+    height: 10vh;
+    width: 100vw;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    font-style: italic;
+    background-color: transparent;
+}
+
+#input-output{
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.inputs{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputs form{
+    height: 50vh;
+    width: 28vw;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: dodgerblue;
+}
+form input{
+    height: 30px;
+    width: 210px;
+    border-radius: 5px;
+    margin-top: 30%;
+    opacity: 0;
+    border: 1.25 solid #212121;
+}
+form button{
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-color: burlywood;
+    color: #fff;
+    background-color: #212121;
+    opacity: 0;
+    font-size: 0.95rem;
+    /* transition: all ease 0.75s; */
+}
+.outputs{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.outputs .result{
+    height: 45%;
+    width: 75%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 1.25fr 1fr 1fr;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+.result h2,h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+    overflow: hidden;
+}
+.user-choice,
+.computer-choice{
+    font-weight: 700;
+    font-style: oblique;
+    font-size: x-large;
+}
+.final-result{
+    font-size: xx-large;
+    font-weight: 900;
+    /* font-style: oblique; */
+}
+form button:hover{
+    background-color: #fff;
+    color: #212121;
+    font-weight: 600;
+    /* transition: Backgroundcolor ease 0.75s; */
+}
+#start{
+    position: absolute;
+    height: 35px;
+    width: 110px;
+    border-radius: 10px;
+    margin-left: 8vw;
+    font-weight: 700;
+    margin-top: 38vh;
+    /* transition: backgroundcolor ease 0.5s; */
+}
+#reset{
+    position: absolute;
+    height: 35px;
+    width: 90px;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    margin-top: 38vh;
+    /* display: none; */
+    /* transition: backgroundcolor ease 0.75s; */
+    margin-left: 25vw;
+}
+#start:hover,
+#reset:hover{
+    /* transition: backgroundColor ease 0.75s; */
+    background-color: #212121;
+    color: #fff;
+}
+
+.left-tries{
+    position: absolute;
+    height: 5vh;
+    width: 25vw;
+    margin-top: -43vh;
+    color: #ffffff9a;
+    font-size: large;
+    /* background-color: aquamarine; */
+}
+.left-tries q{
+    margin-left: 7.5vw;
+    display: none;
+}
+.main-result{
+    position: absolute;
+    height: 50vh;
+    width: 40vw;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    filter: drop-shadow(5px 5px 10px #212121);
+    border-radius: 20px;
+    background-color: #fff;
+    transition: all ease 1s;
+}
+.main-result h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 10vh;
+    color: #212121;
+}
+.main-result .start-again{
+    height: 35px;
+    width: 95px;
+    margin-left: 17vw;
+    margin-top: 5vh;
+    border-radius: 5px;
+    background-color: silver;
+    border: none;
+}
+.start-again:hover{
+    background-color: #555;
+    color: #fff;
+}
+
+@media (width: 412px){
+    *{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    header h1{
+        height: 8vh;
+        width: 100%;
+    }
+    #input-output{
+        height: 92vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .inputs form{
+        height: 80%;
+        width: 80%;
+        border-radius: 50%;
+    }
+    .outputs{
+        height: 90%;
+        margin-top: -5vh;
+    }
+    #start{
+        height: 30px;
+        /* width: 100px; */
+        margin-top: 22vh;
+        margin-left: 5vw;
+    }
+    #reset{
+        height: 30px;
+        margin-top: 22vh;
+        margin-left: 45vw;
+    }
+    .left-tries{
+        height: 3vh;
+        width: 35vw;
+        margin-top: -26vh;
+    }
+    .left-tries q{
+        font-size: small;
+    }
+    .main-result{
+        height: 30vh;
+        width: 400px;
+        /* margin-top: -70vh; */
+        margin-left: 1.5vw;
+    }
+    .main-result h1{
+        font-size: 1.5rem;
+    }
+    .main-result .start-again{
+        margin-left: 35vw;
+        margin-top: 5vh;
+    }
+}
